@@ -9,7 +9,7 @@ mkdir lib
 mkdir share
 mkdir man
 mkdir info
-touch $1/README.md	
+echo $1 >> README.md
 touch .gitignore
 git add bin include lib share man info $1
 git commit -m "Create initial structure."
