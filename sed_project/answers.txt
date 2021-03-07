@@ -1,0 +1,23 @@
+#1 solution below
+sed -E 's/color/colour/g; s/honor/honour/g; s/behavior/behaviour/g; s/humor/humour/g' /usr/share/dict/american-english >> new_dict
+
+#2 solution below
+sed -iE 's/FOOPS/if/g; s/BEEPBOOP/\/\*\*/g' MyFile.c 
+
+#3 solution below
+sed -E '/<script>|<script/,/<\/script>/d' faculty >> faculty.index
+
+#4
+sed -nE '/#[ ]*define/ s/#[ ]*define//p' /usr/include/limits.h > clean_limits.h
+
+#5
+sed -Ei".ORIG" 's/gattaca/@@GREAT MOVIE@@/g' dna.txt
+
+#6
+sed -f scriptFile /home/woodriir/241/file  > decoded
+
+#7
+tail -n 50 /home/woodriir/241/lyrics  | sed -E '1!G;h;$!d' >> ending_lyrics
+
+#8
+run ./hwinfo.sh (excute permission has been given to you)
