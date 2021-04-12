@@ -34,17 +34,17 @@ void sort(char** contents, int size){
 
 
 	
-	//intialize and declare a staic array of chars
+	//intialize and declare yet anohter dynamic array
 	char BigStr[size * 10];
 	for(int w=0; w<size; ++w){
 		strcat(BigStr,StrArray[w]);
 		strcat(BigStr,"\n");
 	}
-
+	
 	//contents now points to the chars in BigStr
 	*contents = BigStr;
 
-	//give back the memory we allocated
+	//give back the memory we allocated for the array
 	free(StrArray);	
 
 }
