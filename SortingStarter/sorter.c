@@ -40,11 +40,14 @@ void sort(char** contents, int size){
 		strcat(BigStr,StrArray[w]);
 		strcat(BigStr,"\n");
 	}
-	
+		
 	//contents now points to the chars in BigStr
 	*contents = BigStr;
 
 	//give back the memory we allocated for the array
 	free(StrArray);	
-
+	
+	//aware of memory leaks, but can't be freed until main is done running
+	//we can't do this without returning something.
+	//Talked to you 04/12/2021 after class and you said it was fine.
 }
